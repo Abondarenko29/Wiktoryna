@@ -81,7 +81,6 @@ def questions_router ():
         flask.session ["result"] = [0, all]
     else:
         quess = flask.session.get ("qui")
-        print (quess)
     if len(flask.session.get ("qui")) > 0:
         ques = quess[0]
         answers = list(ques[2:6])
@@ -104,8 +103,9 @@ def total ():
     right = flask.session.get ("result")[0]
     all = flask.session.get ("result")[1]
     widsotok = right/all * 100
-    widsotok = round(widsotok, 0)
-    return flask.render_template ("total.html", widsotok=widsotok)
+    widsotok = int(round(widsotok, 0))
+    flask.flash ("Відсоток правильних відповідей:" + str(widsotok) + "%.")
+    return flask.redirect (flask.url_for ("index"))
 
 def result ():
     id_ = flask.request.args.get ("id")
