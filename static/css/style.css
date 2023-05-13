@@ -1,0 +1,19 @@
+a.next_btn {
+    border:.5mm rgb(128, 128, 128) solid;
+    color:rgb(0, 0, 0);
+    background-color:lightgray;
+    size:10px;
+    padding-left:1cm;
+}
+body, h1 {
+    background-color:lightcyan;
+    color: rgba(32, 32, 32, 0.774);
+    width:50%;
+}
+.fonty {
+    color: rgba(36, 36, 36, 0.459);
+    margin-left:5%;
+}
+
+/* bottom - Вниз */
+/* top - зверху */

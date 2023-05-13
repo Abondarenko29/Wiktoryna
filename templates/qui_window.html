@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>MK (Memory kards)</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/qui_window.css') }}">
+    </head>
+    <body>
+        <div class="screen"> <!-- div - друге body, де розміщуються елементи. -->
+            <p class="question">{{ que }}</p>
+            <p class="small">Варіанти відповідей:</p>
+            <div class="answers">
+                <form action="{{ url_for('result', id = id, qui_id = qui_id) }}" method="post">
+                    <div class="row1"><span class="coloum1"><input class="answer1" type="radio" name="{{ id }}" value="{{ answer1 }}" required>{{ answer1 }}
+                    </span>
+                    <span class="coloum2"><input class="answer2" type="radio" name="{{ id }}" value="{{ answer2 }}" required>{{ answer2 }}
+                    </span></div><br>
+                    <div class="row2"><span class="coloum1"><input class="answer3" type="radio" name="{{ id }}" value="{{ answer3 }}" required>{{ answer3 }}
+                    </span>
+                    <span class="coloum2"><input class="answer4" type="radio" name="{{ id }}" value="{{ answer4 }}" required>{{ answer4 }}
+                    </span></div>
+                    <input type="submit" class="done" value = Відповісти>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MK (Memory kards)</title>
+	<link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/qui_window.css') }}">
+</head>
+<body>
+	<div class="screen"> <!-- div - друге body, де розміщуються елементи. -->
+		<p class="question">Прорахувати результат:</p>
+		<button onclick="showAlert({{ widsotok }})" class = "done">Прорахувати результат!</button>
+
+		<script>
+		function showAlert(widsotok) {
+			alert("Відсоток правильних відповідей:" + String(widsotok) + "%.");
+		}
+		</script>
+		</div>
+	</body>
+</html>

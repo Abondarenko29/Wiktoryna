@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>MK (Memory kards)</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/qui_window.css') }}">
+    </head>
+    <body>
+        <div class="screen">
+            <p class="question">Питання</p>
+            <p class="small">Результат:</p>
+            <div class="answers">
+                <p>{{ result_ }}</p>
+            </div>
+            <a href="{{ url_for ('questions', id=qui_id) }}" class="done">Наступне питання</a>
+        </div>
+    </body>
+</html>

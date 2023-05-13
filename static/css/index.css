@@ -1,0 +1,43 @@
+.checkcard {
+    border:3px solid black;
+    border-radius:15px 15px;
+    background-color:rgb(245, 245, 245);
+    margin-right: 1000px;
+
+}
+.special_check {
+    border:3px double black;
+    border-radius:15px 25px 25px;
+    background-color: rgba(245, 159, 176, 0.7);
+    left:50px;
+    margin-right: 1000px;;
+}
+
+.years_old {
+    border:4px lime dashed;
+    margin: 10px;
+    color: rgb(43, 43, 43);
+    background-color:rgb(230, 230, 235);
+}
+
+.btn-css {
+    color:black;
+    border:2px solid black;
+    margin:10px;
+    margin-right:55%;
+    background-color:rgb(210, 210, 210)
+}
+
+.special_btn-css {
+    color:black;
+    border:2px solid black;
+    margin:10px;
+    margin-right:55%;
+    background-color:rgba(230, 159, 220, 0.7);
+    border-radius:15px 20px;
+    padding:10px
+}
+
+body {
+    background-color:orange;
+}

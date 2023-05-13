@@ -1,0 +1,29 @@
+<!Doctype HTML!>
+<html>
+    <head>
+        <title>MK (Memory kards)</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/index.css') }}">
+    </head>
+    <body>
+        <ul>
+        {% for qui in quis %}
+            <div class="checkcard">
+                <li><a href="{{ url_for('questions', id=qui.id )}}"><h2 class="btn-css">{{ qui.name }}</h2></a>
+                <div class="years_old">
+                <h5>Рекомендований вік:</h5>
+                <h3>з {{ qui.years_old_from }}</h3>
+                <h3>до {{ qui.years_old_to }} років.</h3></li>
+                </div>
+            </div>
+        {% endfor %}
+        <li class="special_check"><a href="{{ url_for('questions', id = 'all') }}"><h2 class = "special_btn-css">Вікторина</h2></a></li>
+        </ul>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </body>
+</html>
